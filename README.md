@@ -1,6 +1,23 @@
 # ecommerce-admin-dashboard
 
 ## Project Description 
+    Notes: MERN stack
+                MongoDB
+                ExpressJS
+                ReactJS
+                NodeJS
+            
+            Backend
+                NodeJS: runtime
+                ExpressJS: backend framework
+                Mongoose: managing MongoDB
+
+            Frontend
+                Material UI: styling
+                Material UI datagrid: tables
+                NIVO: charts
+                Redux toolkit: state management
+                RTK Query: API calls
 
 
 ## Installation
