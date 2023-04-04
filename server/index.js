@@ -26,3 +26,12 @@ app.use("/client", clientRoutes); //all routes relevant to the client pages
 app.use("/general", generalRoutes); //user and dashboard
 app.use("/management", managementRoutes); //all routes relevant to the management pages
 app.use("/sales", salesRoutes); //all routes relevant to the sales pages
+
+/* Mongoose Setup */
+const PORT = process.env.PORT || 9000;
+mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then(() => {
+    app.listen(PORT, () => console.log(`Server Port: ${PORT}`))
+}).catch((error ) => console.log(`${error} did not connect`))
