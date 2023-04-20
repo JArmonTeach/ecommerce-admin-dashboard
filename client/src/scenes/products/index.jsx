@@ -36,7 +36,7 @@ const Product =({
             }}
         >
             <CardContent>
-                <Typogrpahy 
+                <Typography 
                     sx={{
                         fontSize: 14
                     }}
@@ -44,7 +44,7 @@ const Product =({
                     gutterBottom
                 >
                     {category}
-                </Typogrpahy>
+                </Typography>
                 <Typography variant="h5" component="div">
                     {name}
                 </Typography>
@@ -85,33 +85,54 @@ const Product =({
     )
 }
 
-const Products() {
+const Products = () => {
     const { data, isLoading } = useGetProductsQuery();
     const isNonMobile = useMediaQuery("(min-width: 1000px");
-    console.log("data", data);
 
-    return <Box m="1.5rem 2.5rem">
-        <Header title="PRODUCTS" subtitle="See your list of products." />
-        {data || !isLoading ? (
-            <Box 
-                mt="20px" 
-                display="grid" 
-                gridTemplateColumns="repeat(4, minxmax(0, 1fr))"
-                justifyContent="space-between"
-                rowGap="20px"
-                columnGap="1.33%"
-                sx={{
-                    "& > div": { gridColumn: isNonMobile ? undefined : "span 4"} //makes it auto responsive where it has span of 4 on mobile screens
-                }}
-            >
-                {data.map() => (
-                    
+    return (
+        <Box m="1.5rem 2.5rem">
+            <Header title="PRODUCTS" subtitle="See your list of products." />
+            {data || !isLoading ? (
+                <Box 
+                    mt="20px" 
+                    display="grid" 
+                    gridTemplateColumns="repeat(4, minmax(0, 1fr))"
+                    justifyContent="space-between"
+                    rowGap="20px"
+                    columnGap="1.33%"
+                    sx={{
+                        "& > div": { gridColumn: isNonMobile ? undefined : "span 4"} //makes it auto responsive where it has span of 4 on mobile screens
+                    }}
+                >
+                    {data.map(({
+                        _id,
+                        name,
+                        description,
+                        price,
+                        rating,
+                        category,
+                        supply,
+                        stat
+                    }) => (
+                        <Product 
+                            key={_id}
+                            _id={_id}
+                            name={name}
+                            description={description}
+                            price={price}
+                            rating={rating}
+                            category={category}
+                            supply={supply}
+                            stat={stat}
+                        />
+                    )
                 )}
-            </Box> 
-        ) : (
-            <>Loading...</>
-        )}
-    </Box>;
+                </Box> 
+            ) : (
+                <>Loading...</>
+            )}
+        </Box>
+    );
 };
 
 export default Products;
