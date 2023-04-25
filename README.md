@@ -7,12 +7,12 @@
                 ReactJS
                 NodeJS
             
-            Backend
+            Backend (npm start)
                 NodeJS: runtime
                 ExpressJS: backend framework
                 Mongoose: managing MongoDB
 
-            Frontend
+            Frontend (npm start)
                 Material UI: styling
                 Material UI datagrid: tables
                 NIVO: charts
