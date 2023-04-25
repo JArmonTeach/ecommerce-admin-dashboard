@@ -1,5 +1,6 @@
 import Product from "../models/Product.js";
 import ProductStat from "../models/ProductStat.js";
+import User from "../models/User.js";
 
 export const getProducts = async (req, res) => {
     try {
@@ -19,6 +20,15 @@ export const getProducts = async (req, res) => {
         );
 
         res.status(200).json(productsWithStats);
+    } catch (error) {
+        res.status(404).json({ mesage: error.message })
+    }
+};
+
+export const getCustomers = async (req, res) => {
+    try {
+        const customers = await User.find({ role: "user"}).select("-password"); //the model has the password so we remove it in the frontend
+        res.status(200).json(customers);
     } catch (error) {
         res.status(404).json({ mesage: error.message })
     }
