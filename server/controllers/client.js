@@ -30,6 +30,6 @@ export const getCustomers = async (req, res) => {
         const customers = await User.find({ role: "user"}).select("-password"); //the model has the password so we remove it in the frontend
         res.status(200).json(customers);
     } catch (error) {
-        res.status(404).json({ mesage: error.message })
+        res.status(404).json({ mesage: error.message });
     }
-}
+};
