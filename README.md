@@ -19,6 +19,8 @@
                 Redux toolkit: state management
                 RTK Query: API calls
 
+    Sidenote: customers page is client side pagination where the server sends all info to the frontend and any sorting happens on the frontend. for transactions page, we use server side pagination, where the frontend is just sent the data it needs to initial pagination, then the frontend will send its request for sorting to the backend when needed in which the server will send the new data out again; we do this with transactions because of how big the data is compared to the customers page
+
 
 ## Installation
 
