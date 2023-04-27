@@ -7,7 +7,7 @@
                 ReactJS
                 NodeJS
             
-            Backend (npm start)
+            Backend (npm run dev)
                 NodeJS: runtime
                 ExpressJS: backend framework
                 Mongoose: managing MongoDB
