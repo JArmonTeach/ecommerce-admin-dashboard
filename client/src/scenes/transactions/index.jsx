@@ -14,6 +14,7 @@ const Transactions = () => {
   const [sort, setSort] = useState({});
   const [search, setSearch] = useState("");
 
+  //temp state of the search so that it only searches when the search button is clicked
   const [searchInput, setSearchInput] = useState("");
 
   //params to send to backend
