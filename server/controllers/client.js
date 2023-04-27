@@ -2,6 +2,7 @@ import Product from "../models/Product.js";
 import ProductStat from "../models/ProductStat.js";
 import User from "../models/User.js";
 import Transaction from "../models/Transaction.js";
+import getCountryIso3 from "country-iso-2-to-3";
 
 //mongoose docs will show how to make these calls such as .find()
 
@@ -83,7 +84,25 @@ export const getTransactions = async (req, res) => {
 
 export const getGeography = async (req, res) => {
     try {
-        const users = await User.find()
+        const users = await User.find();
+
+        const mappedLocations = users.reduce((acc, { country }) => {
+            //for every user, the country value is grabbed, convert it to the ISO3 format and add to the object
+            const countryISO3 = getCountryIso3(country);
+            if(!acc[countryISO3]){
+                acc[countryISO3] = 0; //if it doesn't exist, then set country value to 0
+            }
+            acc[countryISO3]++; 
+            return acc; 
+        }, {});//this object will list all the countries as the key and the value will represent the num of users in that country
+
+        const formattedLocations = Object.entries(mappedLocations).map(
+            ([country, count]) => {
+                return { id: country, value: count } //this is the value that NIVO charts wants based on the NIVO docs
+            }
+        );
+
+        res.status(200).json(formattedLocations);
     } catch (error) {
         res.status(404).json({ mesage: error.message });
     }
