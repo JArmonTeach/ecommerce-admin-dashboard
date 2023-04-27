@@ -3,6 +3,8 @@ import ProductStat from "../models/ProductStat.js";
 import User from "../models/User.js";
 import Transaction from "../models/Transaction.js";
 
+//mongoose docs will show how to make these calls such as .find()
+
 export const getProducts = async (req, res) => {
     try {
         const products = await Product.find(); //cycle through all products
@@ -74,6 +76,14 @@ export const getTransactions = async (req, res) => {
             transactions,
             total,
         });
+    } catch (error) {
+        res.status(404).json({ mesage: error.message });
+    }
+};
+
+export const getGeography = async (req, res) => {
+    try {
+        const users = await User.find()
     } catch (error) {
         res.status(404).json({ mesage: error.message });
     }
