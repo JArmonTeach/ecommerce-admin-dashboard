@@ -76,7 +76,7 @@ const Geography = () => {
                 itemWidth: 94,
                 itemHeight: 18,
                 itemDirection: "left-to-right",
-                itemTextColor: theme.palette.secondary[200],
+                itemTextColor: theme.palette.primary[200],
                 itemOpacity: 0.85,
                 symbolSize: 18,
                 effects: [
