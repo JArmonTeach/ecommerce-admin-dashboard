@@ -15,6 +15,8 @@ const Transactions = () => {
   const [search, setSearch] = useState("");
 
   const [searchInput, setSearchInput] = useState("");
+
+  //params to send to backend
   const { data, isLoading } = useGetTransactionsQuery({
     page,
     pageSize,
@@ -46,6 +48,7 @@ const Transactions = () => {
       renderCell: (params) => params.value.length,
     },
     {
+      //to sort this properly then the data needs to change this cost from a string to a number
       field: "cost",
       headerName: "Cost",
       flex: 1,
