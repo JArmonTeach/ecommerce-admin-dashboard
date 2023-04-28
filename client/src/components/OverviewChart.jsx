@@ -7,6 +7,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
   const theme = useTheme();
   const { data, isLoading } = useGetSalesQuery();
 
+  //we are doing data formatting on the client because we will be using the server endpoint on multiple pages
   const [totalSalesLine, totalUnitsLine] = useMemo(() => {
     if (!data) return [];
 
@@ -49,6 +50,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
   return (
     <ResponsiveLine
       data={view === "sales" ? totalSalesLine : totalUnitsLine}
+      //the isDashboard adjustments here, allows the graph to fit the dashboard correctly -- it's like mini chart view
       theme={{
         axis: {
           domain: {
