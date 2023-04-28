@@ -27,5 +27,5 @@ const OverallStatScheme = new mongoose.Schema(
     { timestamps: true }
 );
 
-const Product = mongoose.model("OverallStat", OverallStatScheme);
+const OverallStat = mongoose.model("OverallStat", OverallStatScheme);
 export default OverallStat;
