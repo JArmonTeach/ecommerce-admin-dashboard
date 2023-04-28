@@ -15,7 +15,6 @@ import {
 import {
     SettingsOutlined,
     ChevronLeft,
-    ChevronRight,
     HomeOutlined,
     ShoppingCartOutlined,
     Groups2Outlined,
