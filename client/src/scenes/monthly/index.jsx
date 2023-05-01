@@ -89,7 +89,7 @@ const Monthly = () => {
               reverse: false,
             }}
             yFormat=" >-.2f"
-            // curve="catmullRom"
+            // curve="catmullRom" //this non-curve line is used so that the line does not curve under the x axis
             axisTop={null}
             axisRight={null}
             axisBottom={{
