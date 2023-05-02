@@ -30,7 +30,7 @@ const BreakdownChart = ({ isDashboard = false }) => {
       width={undefined}
       minHeight={isDashboard ? "325px" : undefined}
       minWidth={isDashboard ? "325px" : undefined}
-      position="relative"
+      position="relative" //allows text to be in the middle of the pie chart
     >
       <ResponsivePie
         data={formattedData}
