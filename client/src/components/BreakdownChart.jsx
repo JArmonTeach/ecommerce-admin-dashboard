@@ -26,7 +26,7 @@ const BreakdownChart = ({ isDashboard = false }) => {
 
   return (
     <Box
-      height={isDashboard ? "400px" : "100%"}
+      height={isDashboard ? "400px" : "100%"} //box dependent on height, not width
       width={undefined}
       minHeight={isDashboard ? "325px" : undefined}
       minWidth={isDashboard ? "325px" : undefined}
