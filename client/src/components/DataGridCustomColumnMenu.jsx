@@ -1,6 +1,6 @@
 import {
     GridColumnMenuContainer,
-    GridColumnMenuFilterItem,
+    GridColumnMenuFilterItem, //docs for v6 new names: https://mui.com/x/migration/migration-data-grid-v5/
     GridColumnMenuHideItem,
   } from "@mui/x-data-grid";
   
