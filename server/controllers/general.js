@@ -14,7 +14,7 @@ export const getUser = async (req, res) => {
 
 export const getDashboardStats = async (req, res) => {
   try {
-    // hardcoded values
+    // hardcoded values : limited to the mock data
     const currentMonth = "November";
     const currentYear = 2021;
     const currentDay = "2021-11-15";
