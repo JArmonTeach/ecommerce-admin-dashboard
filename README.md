@@ -1,24 +1,21 @@
 # ecommerce-admin-dashboard
 
 ## Project Description 
-    Notes: MERN stack
-                MongoDB
-                ExpressJS
-                ReactJS
-                NodeJS
-            
-            Backend (npm run dev)
-                NodeJS: runtime
-                ExpressJS: backend framework
-                Mongoose: managing MongoDB
+    A MERN (i.e., MongoDB, ExpressJS, ReactJS, and NodeJS) full stack eCommerce dashboard application. 
 
-            Frontend (npm start)
-                Material UI: styling
-                Material UI datagrid: tables
-                NIVO: charts
-                Redux toolkit: state management
-                RTK Query: API calls
+    The technologies used for this project are:
+        Backend (npm run dev)
+            NodeJS: runtime
+            ExpressJS: backend framework
+            Mongoose: managing MongoDB
 
+        Frontend (npm start)
+            Material UI: styling
+            Material UI datagrid: tables
+            NIVO: charts
+            Redux toolkit: state management
+            RTK Query: API calls
+    These were used to learn its basic syntax and semantics.
 
 ## Installation
 
