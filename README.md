@@ -18,7 +18,15 @@
     These were used to learn its basic syntax and semantics.
 
 ## Installation
+Before creating a pull request for this repository, your machine will need to have:
+    1. NodeJS (https://nodejs.org/en/download)
+    2. NPX (https://www.npmjs.com/package/npx)
+    3. an IDE (e.g., VSCode)
+Dependencies for this project can be found:
+    1. Client side: package.json file
+    2. Server side: packae.json file
 
+    or the SBOM file can be exported in Github in the repository settings > insights > dependecy graph
 
 ## Usage
 
