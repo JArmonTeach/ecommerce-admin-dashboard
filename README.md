@@ -29,7 +29,10 @@ Dependencies for this project can be found:
     or the SBOM file can be exported in Github in the repository settings > insights > dependecy graph
 
 ## Usage
-
+    1. Once both the frontend code and backend code for the application are ran, the landing page of the dashboard app will appear.
+    2. The user can toggle the navigation bar using the hamburger button or the dark/light themes clicking the moon icon.
+    3. When navigating to the other pages, the onces will tables will have view, sort and filter options.
+    4. The pages with graphs have hover over animations that will show more details about the data.
 
 ## Credits
     Tutorial that had ecommerce project: https://www.youtube.com/watch?v=0cPCMIuDk2I&t=19s
